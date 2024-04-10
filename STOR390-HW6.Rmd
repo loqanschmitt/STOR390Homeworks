@@ -18,7 +18,7 @@ The update step for gradient descent is as follows: $\theta_{i+1} = \theta{i} - 
 It computes the gradient using the entire dataset and the current parameters, updates the model's parameters, and passes the results again into the next update step until an objective is met, such as risk minimization. Gradient descent is useful for non-convex functions, such as those with many local minimums, as it converges toward a singular optimization point.
 
 The update step for stochastic gradient descent is as follows: $\theta_{i+1} = \theta_{i} - \alpha\nabla F (\theta_i, X_i,Y_i)$.
-Unlike gradient descent, SGD uses a randomly-selected subset of the data instead of the entire dataset. It computes the gradient using this subset, updates the model's parameters, and passes the results again into the next update step until risk is minimized. This is especially useful for more convex functions and not getting captured local minimums. Whereas gradient descent converges towards a local minimum, SGD avoids this due to the different subsets of data being used, allowing it to approach and find the global minimum.
+Unlike gradient descent, SGD uses a randomly-selected subset of the data instead of the entire dataset. It computes the gradient using this subset, updates the model's parameters, and passes the results again into the next update step until risk is minimized. This is especially useful for more convex functions and not getting captured in local minimums. Whereas gradient descent converges towards a local minimum, SGD avoids this due to the different subsets of data being used, allowing it to approach and find the global minimum.
 
 
 #
@@ -35,7 +35,7 @@ $\omega_{t+1} = \sum_{k=1}^K {\frac{n_k}{n}} (\omega_t -\eta\nabla F_k(\omega_t)
 
 Step 2: Distribution 
 $\omega_{t+1}$ =
-$\sum_{k=1}^K\omega_t -  \sum_{k=1}^K\eta \frac{n_k}{n}\nabla F_k(\omega_t)$
+$\sum_{k=1}^K{\frac{n_k}{n}}\omega_{t} -  \sum_{k=1}^K\eta \frac{n_k}{n}\nabla F_k(\omega_t)$
 
 Step 3: Factorization
 $\omega_{t+1}$ = 
